@@ -13,7 +13,6 @@ const NavBar = () => {
         bg-slate-200
         z-30
         shadow-sm
-
         ">
             <div className="py-4 border-b-[1px]">
                 <Container>
@@ -24,7 +23,7 @@ const NavBar = () => {
                     gap-3
                     md:gap-0
                     ">
-                        <Link href="/" className={`${redressed.className} font-bold text-2x1`}>
+                        <Link href="/" className={`${redressed.className} font-bold text-2xl`}>
                         Mystic Owl
                         </Link>
                         <div className="hidden md:block">Buscar</div>
