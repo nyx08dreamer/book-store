@@ -1,10 +1,31 @@
 'use client'
 
+import Button from "@/app/components/Button";
+import SetQuantity from "@/app/components/products/SetQuantity";
 import { Rating } from "@mui/material";
+import { useCallback, useState } from "react";
 
 interface ProductDetailsProps{
     product: any
 }
+
+export type CartProductType = {
+    id: string,
+    name: string,
+    description: string,
+    category: string,
+    brand: string,
+    selectedImg: SelectedImgType
+    quantity: number,
+    price: number
+}
+
+export type SelectedImgType = {
+    color: string,
+    colorCode: string,
+    image: string
+}
+
 
 const Horizontal = () => {
     return <hr className="w-[30%] my-2"/>
@@ -12,7 +33,42 @@ const Horizontal = () => {
 
 const ProductDetails: React.FC<ProductDetailsProps> = ({product}) => {
 
+    const [cartProduct, setCartProduct] = useState<CartProductType>({
+        id: product.id,
+        name: product.name,
+        description: product.description,
+        category: product.category,
+        brand: product.brand,
+        selectedImg: {...product.images[0]},
+        quantity: 1,
+        price: product.price 
+    });
+
+    console.log(cartProduct);
+
     const productRating = product.reviews.reduce((acc: number, item: any) => item.rating + acc, 0) / product.reviews.length;
+
+    const handleQuantityIncrease = useCallback(() =>{
+
+        if(cartProduct.quantity === 99){
+            return;
+        }
+
+        setCartProduct((prev) => {
+            return {...prev, quantity: ++prev.quantity}
+        });
+    }, [cartProduct]);
+
+    const handleQuantityDecrease = useCallback(() =>{
+
+        if(cartProduct.quantity === 1){
+            return;
+        }
+
+        setCartProduct((prev) => {
+            return {...prev, quantity: --prev.quantity}
+        });
+    }, [cartProduct]);
 
     return ( 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -40,12 +96,15 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({product}) => {
                     {product.inStock ? 'In Stock' : 'Out of Stock'}
                 </div>
                 <Horizontal/>
-                <div>
-                    Cantidad
-                </div>
+                <SetQuantity
+                cartProduct={cartProduct}
+                handleQuantityIncrease={handleQuantityIncrease}
+                handleQuantityDecrease={handleQuantityDecrease}
+                />
                 <Horizontal/>
-                <div>
-                    Agregar al Carrito
+                <div className="max-w-[300px]">
+                    <Button label="Agregar al Carrito"
+                    onClick={() =>{}} />
                 </div>
             </div>
         </div> 
