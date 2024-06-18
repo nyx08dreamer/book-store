@@ -41,7 +41,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({product}) => {
         brand: product.brand,
         selectedImg: {...product.images[0]},
         quantity: 1,
-        price: product.price 
+        price: product.price,
     });
 
     console.log(cartProduct);
@@ -54,8 +54,8 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({product}) => {
             return;
         }
 
-        setCartProduct((prev) => {
-            return {...prev, quantity: ++prev.quantity}
+        setCartProduct((prev) => { 
+            return {...prev, quantity: ++prev.quantity -1}
         });
     }, [cartProduct]);
 
@@ -66,7 +66,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({product}) => {
         }
 
         setCartProduct((prev) => {
-            return {...prev, quantity: --prev.quantity}
+            return {...prev, quantity: --prev.quantity +1}
         });
     }, [cartProduct]);
 
