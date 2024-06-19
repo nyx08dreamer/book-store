@@ -4,6 +4,7 @@ import Button from "@/app/components/Button";
 import SetQuantity from "@/app/components/products/SetQuantity";
 import { Rating } from "@mui/material";
 import { useCallback, useState } from "react";
+import Image from "next/image";
 
 interface ProductDetailsProps{
     product: any
@@ -17,7 +18,8 @@ export type CartProductType = {
     brand: string,
     selectedImg: SelectedImgType
     quantity: number,
-    price: number
+    price: number,
+    image: string
 }
 
 export type SelectedImgType = {
@@ -42,6 +44,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({product}) => {
         selectedImg: {...product.images[0]},
         quantity: 1,
         price: product.price,
+        image: product.images
     });
 
     console.log(cartProduct);
@@ -72,7 +75,20 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({product}) => {
 
     return ( 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>Images</div>
+            <div className="col-span-1 relative aspect-square">
+            <Image
+                    fill
+                    src={product.images[0].image}
+                    alt={product.name}
+                    className="w-full
+            h-full
+            object-contain
+            max-h-[500px]
+            mix-h-[300px]
+            sm:mix-h-[400px]
+            "
+                    />
+            </div>
             <div className="flex flex-col gap-1 text-slate-500 text-sm">
                 <h2 className="text-3xl font-medium text-slate-700">{product.name}</h2>
                 <div className="flex items-center gap-2">
