@@ -5,9 +5,10 @@ import { MdArrowBack } from "react-icons/md";
 import Heading from "../components/Heading";
 import Button from "../components/Button";
 import ItemContent from "./itemContent";
+import { formatPrice } from "@/utils/formatPrice";
 
 const CartClient = () => {
-    const {cartProducts, handleClearCart} = useCart();
+    const {cartProducts, handleClearCart, cartTotalAmount} = useCart();
 
     if(!cartProducts || cartProducts.length === 0){
         return(
@@ -29,7 +30,7 @@ const CartClient = () => {
         <div>
         <Heading tittle="Carrito de Compras" center/>
         <div className="grid
-        grid-ools-5
+        grid-cols-5
         text-xs
         gap-4
         pb-2
@@ -48,21 +49,19 @@ const CartClient = () => {
             })}
         </div>
         <div className="border-t-[1.5px] border-slate-200 py-4 flex justify-between gap-4">
-            <div className="w-[90px]">
-                <Button label="Clear Cart" onClick={() =>{handleClearCart();
-
+            <div className="w-[125px]">
+                <Button label="Limpiar Carrito" onClick={() =>{handleClearCart();
                 }}
-                small 
-                outline
+                small outline
                 />
             </div>
-            <div className="text-sm flex flex-col gap-1 items start">
+            <div className="text-sm flex flex-col gap-1 items-start">
                 <div className="flex justify-between w-full text-base font-semibold">
                 <span>Subtotal</span>
-                <span>$1.000</span>
+                <span>{formatPrice(cartTotalAmount)}</span>
                 </div>
-                <p className="text-slate-500">Taxes and Shipping calculate at checkout</p>
-                <Button label="Checkout" onClick={() => {}} />
+                <p className="text-slate-500">Los impuestos y envío se calculan al finalizar la compra</p>
+                <Button label="Finalizar Compra" onClick={() => {}} />
                 <Link href ={"/"} className="
                     text-slate-500 flex items-center gap-1 mt-2
                     "

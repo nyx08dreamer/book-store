@@ -42,7 +42,7 @@ const ItemContent: React.FC<ItemContentProps> = ({item } ) => {
                 {truncateText(item.name)}</Link>
                 <div>{item.selectedImg.color}</div>
                 <div className="w-[70px]">
-                    <button className="text-slate-500 underline" onClick={() => handleRemoveProductFromCart(item)}>Remove</button>
+                    <button className="text-slate-500 underline" onClick={() => handleRemoveProductFromCart(item)}>Remover</button>
                 </div>
             </div>
         </div>
