@@ -3,6 +3,7 @@ import Container from "../Container";
 import FooterList from "./FooterList";
 import { MdFacebook } from "react-icons/md";
 import { AiFillInstagram, AiFillTwitterCircle, AiFillYoutube } from "react-icons/ai";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
     return (<footer className="bg-slate-700 text-slate-200 text-sm mt-16
@@ -32,7 +33,7 @@ const Footer = () => {
                     <div className="w-full md:w-1/3 mb-6 md:mb-0">
                         <h3 className="text-base font-bold mb-2">Sobre Nosotros</h3>
                         <p className="mb-2">Vendemos Libros.</p>
-                        <p>&copy; {new Date().getFullYear()} Mystic Owl. All rights reserved</p>
+                        <p>&copy; {new Date().getFullYear()} Mystic Owl. Todos los derechos reservados</p>
                     </div>
 
                     <FooterList>
@@ -42,13 +43,10 @@ const Footer = () => {
                                 <MdFacebook size={24}></MdFacebook>
                             </Link>
                             <Link href='#'>
-                                <AiFillTwitterCircle size={24}></AiFillTwitterCircle>
+                                <FaXTwitter size={24}></FaXTwitter>
                             </Link>
                             <Link href='#'>
                                 <AiFillInstagram size={24}></AiFillInstagram>
-                            </Link>
-                            <Link href='#'>
-                                <AiFillYoutube size={24}></AiFillYoutube>
                             </Link>
                         </div>
                     </FooterList>
