@@ -54,7 +54,7 @@ const LoginForm = () => {
             required
             type="password"
             />
-            <Button label = {isLoading ? "Loading" : "Entrar"} onClick={handleSubmit(onSubmit)}/>
+            <Button label = {isLoading ? "Cargando" : "Entrar"} onClick={handleSubmit(onSubmit)}/>
             <p className="text-sm">
                 ¿Aún no tienes una cuenta? <Link className= "underline" href = '/register'>
                 Regístrate

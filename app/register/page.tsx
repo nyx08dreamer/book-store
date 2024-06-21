@@ -6,9 +6,7 @@ const Register = () => {
     return (
         <Container>
             <FormWrap>
-            <RegisterForm>
-                
-            </RegisterForm>
+            <RegisterForm/>
             </FormWrap>
         </Container>
     );

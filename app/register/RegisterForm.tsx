@@ -64,7 +64,7 @@ const RegisterForm = () => {
             required
             type="password"
             />
-            <Button label = {isLoading ? "Loading" : 'Sign Up'} onClick={handleSubmit(onSubmit)}/>
+            <Button label = {isLoading ? "Cargando" : 'Resgistrarse'} onClick={handleSubmit(onSubmit)}/>
             <p className="text-sm">
                 ¿Ya tienes una cuenta? <Link className= "underline" href = '/login'>
                 Inicia Sesión
