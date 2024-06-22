@@ -23,16 +23,16 @@ model User {
   firstName String?
   lastName String?
   email String? @unique
-  password String?
+  hashedPassword String?
   role Role @default(USER)
 }
 
-model Client {
+model Customer {
   id Int @id @default(autoincrement())
   firstName String?
   lastName String?
   email String? @unique
-  password String?
+  hashedPassword String?
   role Role @default(CLIENT)
 }
 

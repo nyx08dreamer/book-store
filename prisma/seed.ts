@@ -2,7 +2,7 @@ import { PrismaClient } from '@prisma/client'
 import { books } from './book';
 import { authors } from './author';
 import { users } from './user';
-import { clients } from './client';
+import { customers } from './customer';
 import { categories } from './category';
 const prisma = new PrismaClient()
 
@@ -29,10 +29,10 @@ async function main() {
         })
     }
 
-    for (let client of clients){
+    for (let customer of customers){
 
-        await prisma.client.create({
-            data: client
+        await prisma.customer.create({
+            data: customer
         })
     }
     
