@@ -10,5 +10,11 @@ export const categories : Prisma.CategoryCreateInput[] = [
     },
     {
         name: "Comedia",
-    }
+    },
+    {
+        name: "Romance",
+    },
+    {
+        name: "Aventura",
+    },
 ]

@@ -2,15 +2,15 @@ import {Prisma} from '@prisma/client'
 
 export const authors : Prisma.AuthorCreateInput[] = [
     {
-        firstName: "Alice",
-        lastName: "Oseman",
+        firstName: "Stephen",
+        lastName: "King",
     },
     {
-        firstName: "J.K",
-        lastName: "Rowling",
+        firstName: "Tsuki",
+        lastName: "Arunji",
     },
     {
-        firstName: "Alexander",
-        lastName: "Moya",
-    }
+        firstName: "Ariana",
+        lastName: "Godoy",
+    },
 ]
