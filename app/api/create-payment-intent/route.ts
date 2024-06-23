@@ -11,10 +11,9 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, {
 
 const calculateOrderAmount = (items: CartProductType[]) =>{
     const totalPrice = items.reduce((acc, item) => {
-        const itemTotal = item.price * item.quantity
-
+        const itemTotal = item.price * item.quantity;
         return acc + itemTotal;
-    }, 0)
+    }, 0);
 
     const price: any = Math.floor(totalPrice);
 
@@ -22,10 +21,10 @@ const calculateOrderAmount = (items: CartProductType[]) =>{
 }
 
 export async function POST(request: Request) {
-    const currentUser = await getCurrentUser()
+    const currentUser = await getCurrentUser();
 
     if(!currentUser){
-        return NextResponse.json({error: 'Unauthorized'}, {status: 401})
+        return NextResponse.json({error: 'No Autorizado'}, {status: 401})
     }
 
     const body = await request.json()
@@ -38,7 +37,7 @@ export async function POST(request: Request) {
         status: "pending",
         deliveryStatus: "pending",
         paymentIntentId: payment_intent_id,
-        products: items
+        products: items,
     }
 
     if(payment_intent_id){
@@ -50,22 +49,6 @@ export async function POST(request: Request) {
             );
 
         //update the order
-        const [existing_order, update_order] = await Promise.all([
-            prisma.order.findFirst({
-                where: {paymentIntentId: payment_intent_id}
-            }),
-            prisma.order.update({
-                where: {paymentIntentId: payment_intent_id},
-                data: {
-                    amount: total,
-                    products: items
-                }
-            })
-        ])
-
-        if(!existing_order){
-            return NextResponse.json({error: "Transacción fallida"}, {status: 400})
-        }
         
         return NextResponse.json({ paymentIntent: update_intent });
     }
@@ -80,7 +63,8 @@ export async function POST(request: Request) {
         orderData.paymentIntentId = paymentIntent.id
 
         //await prisma.order.create({
-            //data: order});
+        //    data: orderData
+        //});
 
         return NextResponse.json({paymentIntent});
     }

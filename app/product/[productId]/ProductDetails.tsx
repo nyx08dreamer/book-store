@@ -22,7 +22,6 @@ export type CartProductType = {
     selectedImg: SelectedImgType
     quantity: number,
     price: number,
-    image: string
 }
 
 export type SelectedImgType = {
@@ -47,7 +46,6 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({product}) => {
         selectedImg: {...product.images[0]},
         quantity: 1,
         price: product.price,
-        image: product.images
     });
 
     const router = useRouter();

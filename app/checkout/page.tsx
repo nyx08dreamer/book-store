@@ -7,9 +7,7 @@ const Checkout = () => {
     return (<div className="p-8">
         <Container>
             <FormWrap>
-                <CheckoutClient>
-                    
-                </CheckoutClient>
+                <CheckoutClient/>
             </FormWrap>
         </Container>
     </div>)

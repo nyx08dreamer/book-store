@@ -14,7 +14,7 @@ import Heading from "../components/Heading";
 import Button from "../components/Button";
 
 interface CheckoutFormProps{
-    clientSecret: string;
+    clientSecret: string 
     handleSetPaymentSuccess: (value: boolean) => void;
 }
 
@@ -61,7 +61,7 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({clientSecret, handleSetPayme
 
     return <form onSubmit={handleSubmit} id="payment-form">
         <div className="mb-6">
-            <Heading title="Enter your details to complete checkout"/>
+            <Heading title="Ingrese sus datos para terminar la compra"/>
         </div>
         <h2 className="font-semibold mb-2">Información de Dirección</h2>
         <AddressElement options={{

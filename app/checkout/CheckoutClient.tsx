@@ -18,17 +18,22 @@ const CheckoutClient = () => {
     const [clientSecret, setClientSecret] = useState('');
     const [paymentSuccess, setPaymentSuccess] = useState(false)
 
-    const router = useRouter()
+    const router = useRouter();
+
+    console.log("paymentIntent", paymentIntent);
+    console.log("clientSecret", clientSecret);
+
+
 
     useEffect(() => {
-        //create a paymentintent as soon as the page loads
+        //create a paymentIntent as soon as the page loads
         if (cartProducts){
             setLoading(true)
             setError(false)
 
-            fetch('/api/create-payment-intent', {
+            fetch("/api/create-payment-intent", {
                 method: "POST",
-                headers: {'Content-Type': 'application/json'},
+                headers: {"Content-Type": "application/json"},
                 body: JSON.stringify({
                     items: cartProducts,
                     payment_intent_id: paymentIntent
@@ -36,9 +41,8 @@ const CheckoutClient = () => {
             }).then((res) =>{
                 setLoading(false)
                 if(res.status === 401){
-                    return router.push('/login')
+                    return router.push("/login")
                 }
-
                 return res.json()
             }).then((data) => {
                 setClientSecret(data.paymentIntent.client_secret)
@@ -47,15 +51,15 @@ const CheckoutClient = () => {
                 setError(true)
                 console.log("Error", error)
                 toast.error("Algo salió mal")
-            })
+            });
         }
     }, [cartProducts, paymentIntent]);
 
     const options: StripeElementsOptions = {
         clientSecret,
         appearance: {
-            theme: 'stripe',
-            labels: 'floating',
+            theme: "stripe",
+            labels: "floating",
         }
     }
 
@@ -63,22 +67,21 @@ const CheckoutClient = () => {
         setPaymentSuccess(value)
     }, [])
 
-    return <div className="w-full">
-        {clientSecret && (
-            <Elements options={options} stripe={stripePromise}>
-                <CheckoutForm clientSecret={clientSecret} handleSetPaymentSuccess={handleSetPaymentSuccess}
-                />
-            </Elements>
-        )}
-        {loading && <div className="text-center">Cargando compra...</div>}{error && <div className="text-center text-rose-500">Algo ha salido mal...</div>}
-        {paymentSuccess && (
-            <div className="flex items-center flex-col gap-4">
-                <div className="text-teal-500 text-center">Paayment Success</div>
-                <div className="max-w-[220px] w-full">
-                    <Button label="View Your Orders" onClick={() => router.push("/order")}/>
-                </div>
+    return <div className="w-full">{clientSecret && cartProducts &&(
+        <Elements options={options} stripe={stripePromise}>
+            <CheckoutForm clientSecret={clientSecret} handleSetPaymentSuccess={handleSetPaymentSuccess}
+            />
+        </Elements>
+    )}
+    {loading && <div className="text-center">Cargando compra...</div>}{error && <div className="text-center text-rose-500">Algo ha salido mal...</div>}
+    {paymentSuccess && (
+        <div className="flex items-center flex-col gap-4">
+            <div className="text-teal-500 text-center">Compra Exitosa</div>
+            <div className="max-w-[220px] w-full">
+                <Button label="View Your Orders" onClick={() => router.push("/order")}/>
             </div>
-        )}
+        </div>
+    )}
     </div>;
 };
 

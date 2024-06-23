@@ -4,6 +4,7 @@ import { authors } from './author';
 import { users } from './user';
 import { customers } from './customer';
 import { categories } from './category';
+import { orders } from './order';
 const prisma = new PrismaClient()
 
 async function main() {
@@ -40,6 +41,13 @@ async function main() {
 
         await prisma.category.create({
             data: category
+        })
+    }
+
+    for (let order of orders){
+
+        await prisma.order.create({
+            data: order
         })
     }
 }
