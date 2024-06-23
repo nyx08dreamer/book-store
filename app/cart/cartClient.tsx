@@ -6,9 +6,17 @@ import Heading from "../components/Heading";
 import Button from "../components/Button";
 import ItemContent from "./itemContent";
 import { formatPrice } from "@/utils/formatPrice";
+import { SafeUser } from "@/types";
+import { useRouter } from "next/navigation";
 
-const CartClient = () => {
+interface CartClientProps{
+    currentUser: SafeUser | null
+}
+
+const CartClient: React.FC<CartClientProps> = ({currentUser}) => {
     const {cartProducts, handleClearCart, cartTotalAmount} = useCart();
+
+    const router = useRouter()
 
     if(!cartProducts || cartProducts.length === 0){
         return(
@@ -28,7 +36,7 @@ const CartClient = () => {
     }
     return <div> 
         <div>
-        <Heading tittle="Carrito de Compras" center/>
+        <Heading title="Carrito de Compras" center/>
         <div className="grid
         grid-cols-5
         text-xs
@@ -61,7 +69,11 @@ const CartClient = () => {
                 <span>{formatPrice(cartTotalAmount)}</span>
                 </div>
                 <p className="text-slate-500">Los impuestos y envío se calculan al finalizar la compra</p>
-                <Button label="Finalizar Compra" onClick={() => {}} />
+                <Button label={currentUser ? "Finalizar Compra": "Login to Checkout"} 
+                outline = {currentUser ? false : true}
+                onClick={() => {
+                    currentUser ? router.push("/checkout") : router.push("/login")}} 
+                />
                 <Link href ={"/"} className="
                     text-slate-500 flex items-center gap-1 mt-2
                     "

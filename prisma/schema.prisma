@@ -33,6 +33,7 @@ model Customer {
   lastName String?
   email String? @unique
   hashedPassword String?
+  orders Order[]
   role Role @default(CLIENT)
 }
 
@@ -53,6 +54,45 @@ model Category {
   id Int @id @default(autoincrement())
   name String
   books Book[]
+}
+
+model Order{
+  id Int @id @default(autoincrement())
+  customer Customer @relation(fields: [customerId], references: [id])
+  customerId Int
+  amount Float
+  currency String
+  status String
+  deliveryStatus String?
+  createDate DateTime @default(now())
+  paymentIntentId String @unique
+  products CartProductType[]
+  address Address?
+}
+
+model CartProductType {
+  id Int @id @default(autoincrement())
+  name String
+  description String
+  category String
+  brand String
+  selectedImg String
+  quantity Int
+  price Float
+  image String
+  orders Order[]
+}
+
+model Address {
+  id Int @id @default(autoincrement())
+  city String
+  country String
+  line1 String
+  line2 String?
+  postal_code String
+  state String
+  orders Order @relation(fields: [orderId], references: [id])
+  orderId Int @unique
 }
 
 model Author {
