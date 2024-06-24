@@ -44,11 +44,11 @@ model Book {
   author Author[]
   description String
   categories Category[]
-  publisher String
-  publication Int
+  publisher String?
+  publication Int?
   price Float
-  quantity Int
-  selled Int
+  quantity Int?
+  selled Int?
   images Image[]
   reviews Review[] 
 }

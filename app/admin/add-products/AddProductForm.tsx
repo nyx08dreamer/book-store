@@ -1,5 +1,6 @@
 'use client'
 
+import Button from "@/app/components/Button";
 import Heading from "@/app/components/Heading";
 import CategoryInput from "@/app/components/inputs/CategoryInput";
 import CustomCheckBox from "@/app/components/inputs/CustomCheckBox";
@@ -7,22 +8,28 @@ import Input from "@/app/components/inputs/Input";
 import SelectColor from "@/app/components/inputs/SelectColor";
 import TextArea from "@/app/components/inputs/TextArea";
 import { categories } from "@/utils/Categories";
-import { useState } from "react";
-import { FieldValues, useForm } from "react-hook-form";
+import { colors } from "@/utils/Colors";
+import { useCallback, useEffect, useState } from "react";
+import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 
 
 export type ImageType = {
-    image: File | null
-    check: string
+    image: File | null;
+    color: string;
+    colorCode: string,
 }
 
 export type UploadedImageType = {
-    image: string
-    check: string
+    image: string;
+    color: string;
+    colorCode: string,
 }
 
 const AddProductsForm = () => {
     const [isLoading, setIsLoading] = useState(false)
+    const [images, setImages] = useState<ImageType[] | null>();
+    const [isProductCreated, setIsProductCreated] = useState(false);
+
     const {register, handleSubmit, setValue, watch, reset, formState:{errors}} = useForm<FieldValues>({
         defaultValues:{
             title: "",
@@ -35,8 +42,24 @@ const AddProductsForm = () => {
             selled: "", 
             images: [],
             price: "",
+        },
+    });
+
+    useEffect(() => {
+        setCustomValue('images', images)
+    }, [images]);
+
+    useEffect(() => {
+        if(isProductCreated){
+            reset();
+            setImages(null);
+            setIsProductCreated(false);
         }
-    })
+    }, [isProductCreated])
+
+    const onSubmit: SubmitHandler<FieldValues> = async(data) => {
+        console.log("Product Data", data);
+    }
 
     const category = watch("category");
 
@@ -45,8 +68,29 @@ const AddProductsForm = () => {
             shouldValidate: true,
             shouldDirty: true,
             shouldTouch: true,
+        });
+    };
+
+    const addImageToState = useCallback((value: ImageType) => {
+        setImages((prev) => {
+            if(!prev){
+                return [value];
+            } 
+
+            return [...prev, value];
         })
-    }
+    }, []);
+
+    const removeImageFromState = useCallback((value: ImageType) => {
+        setImages((prev) => {
+            if(prev){
+                const filteredImages = prev.filter((item) => item.color != value.color)
+                return filteredImages;
+            }
+            return prev;
+        })
+    }, []);
+
 
     return <>
         <Heading title="Agrega un Libro" center/>
@@ -127,16 +171,20 @@ const AddProductsForm = () => {
                 <div className="font-bold">
                 Selecciona la imagen del producto
                 </div>
+                <div className="grid grid-cols-2 gap-3">
+                    {colors.map((item, index) => {
+                        return (<SelectColor key={index} item={item} 
+                        addImageToState={addImageToState} 
+                        removeImageFromState={removeImageFromState} 
+                        isProductCreated={isProductCreated}/>
+                    );
+                    })}
+                </div>
             </div>
-            <div>
-                return 
-                <SelectColor 
-                item={item}
-                addImageToState={() => {}}
-                removeImageFromState={() => {}}
-                isProductCreated={false}
-                />
-            </div>
+            <Button
+            label={isLoading ? "Procesando..." : "Agregar Libro"}
+            onClick={handleSubmit(onSubmit)}
+            />
         </div>
     </>;
 }

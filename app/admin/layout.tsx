@@ -1,7 +1,7 @@
 import AdminNav from "../components/admin/AdminNav";
 
 export const metadata = {
-    title: "E~Shop Admin",
+    title: "Book Store Admin",
     description: "E~Shop Admin Dashboard",
 };
 

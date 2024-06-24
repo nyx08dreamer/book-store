@@ -27,5 +27,5 @@ export async function POST(request:Request) {
         },
     });
 
-    return NextResponse.json(book)
+    return NextResponse.json(book);
 }
