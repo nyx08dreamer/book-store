@@ -1,5 +1,5 @@
 const ManageOrders = () => {
-    return <div>ManageOrders</div>;
+    return <div></div>;
 }
 
 export default ManageOrders

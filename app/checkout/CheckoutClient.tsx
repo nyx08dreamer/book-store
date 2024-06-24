@@ -78,7 +78,7 @@ const CheckoutClient = () => {
         <div className="flex items-center flex-col gap-4">
             <div className="text-teal-500 text-center">Compra Exitosa</div>
             <div className="max-w-[220px] w-full">
-                <Button label="View Your Orders" onClick={() => router.push("/order")}/>
+                <Button label="Regresar a la Tienda" onClick={() => router.push("/")}/>
             </div>
         </div>
     )}
