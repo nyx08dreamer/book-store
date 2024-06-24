@@ -34,6 +34,7 @@ model Customer {
   email String? @unique
   hashedPassword String?
   orders Order[]
+  reviews Review[]
   role Role @default(CLIENT)
 }
 
@@ -48,6 +49,19 @@ model Book {
   price Float
   quantity Int
   selled Int
+  image Image[]
+  reviews Review[] 
+}
+
+model Review {
+  id Int @id @default(autoincrement())
+  customer Customer @relation(fields: [customerId], references: [id])
+  customerId Int @unique
+  books Book @relation(fields: [bookId], references: [id])
+  bookId Int @unique
+  rating Int
+  comment String
+  createDate DateTime @default(now())
 }
 
 model Category {
@@ -59,7 +73,7 @@ model Category {
 model Order{
   id Int @id @default(autoincrement())
   customer Customer @relation(fields: [customerId], references: [id])
-  customerId Int
+  customerId Int @unique
   amount Float
   currency String
   status String
@@ -79,8 +93,14 @@ model CartProductType {
   selectedImg String
   quantity Int
   price Float
-  image String
   orders Order[]
+}
+
+model Image {
+  id Int @id @default(autoincrement())
+  image String
+  books Book @relation(fields: [bookId], references: [id])
+  bookId Int
 }
 
 model Address {
