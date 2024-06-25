@@ -39,13 +39,13 @@ const Footer = () => {
                     <FooterList>
                     <h3 className="text-base font-bold mb-2">Síguenos</h3>
                         <div className="flex gap-2">
-                        <Link href='#'>
+                        <Link href='https://www.facebook.com/profile.php?id=61561229350403&mibextid=ZbWKwL'>
                                 <MdFacebook size={24}></MdFacebook>
                             </Link>
-                            <Link href='#'>
+                            <Link href='https://x.com/Mysteryfair1?t=GS_dlK6OzqQISTwXTb5SUg&s=09'>
                                 <FaXTwitter size={24}></FaXTwitter>
                             </Link>
-                            <Link href='#'>
+                            <Link href='https://www.instagram.com/mysthicowl/'>
                                 <AiFillInstagram size={24}></AiFillInstagram>
                             </Link>
                         </div>
