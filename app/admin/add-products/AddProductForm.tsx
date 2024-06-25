@@ -7,10 +7,13 @@ import CustomCheckBox from "@/app/components/inputs/CustomCheckBox";
 import Input from "@/app/components/inputs/Input";
 import SelectColor from "@/app/components/inputs/SelectColor";
 import TextArea from "@/app/components/inputs/TextArea";
+import firebaseApp from "@/libs/firebase";
 import { categories } from "@/utils/Categories";
 import { colors } from "@/utils/Colors";
 import { useCallback, useEffect, useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+import toast from "react-hot-toast";
+import { getStorage, ref, uploadBytes, uploadBytesResumable } from "firebase/storage";
 
 
 export type ImageType = {
@@ -59,6 +62,38 @@ const AddProductsForm = () => {
 
     const onSubmit: SubmitHandler<FieldValues> = async(data) => {
         console.log("Product Data", data);
+
+        setIsLoading(true)
+        let UploadedImages: UploadedImageType[] = []
+
+        if(!data.category){
+            setIsLoading(false)
+            return toast.error("La categoría no ha sido seleccionada")
+        }
+
+        if(!data.images || data.images.length === 0){
+            setIsLoading(false)
+            return toast.error("No se ha seleccionado una imagen")
+        }
+
+        const handleImageUploads = async () => {
+            toast("Creando producto, por favor espere");
+            try{
+                for(const item of data.images)
+                    if(item.image){
+                        const fileName = new Date().getTime() + '-' + item.image.name
+                        const storage = getStorage(firebaseApp)
+                        const storageRef = ref(storage, `products/${fileName}`);
+                        const uploadTask = uploadBytesResumable(storageRef, item.image);
+
+                        await new Promise<void>((resolve, reject) =>{
+                            
+                        })
+                    }
+            } catch (error) {
+
+            }
+        }
     }
 
     const category = watch("category");
