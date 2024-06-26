@@ -743,6 +743,66 @@ export const products = [
     ],
   },
   {
+    id: "182435b38c44d52z9542e340",
+    name: "Sentimientos Adolescentes",
+    description: 
+      "A veces, es difícil comprender las emociones, en especial cuando se trata de los adolescentes, cuesta bastante ponerse en el lugar de la otra persona y poder ayudarla. Los padres estrictos suelen estar presentes en la mayoría de estos casos, al igual que la depresión, ansiedad y el temor o preocupación de la opinión de la sociedad. Vivir a diario con una lucha constante en tu interior que te detiene de hacer cosas que te hagan feliz, no poder tomar una decisión en una situación crucial y agobiarte por todo sin alguna razón y sentir que caes en un pozo del cual es imposible salir.",
+    price: 19.99,
+    brand: "Arcadiboy Blue",
+    category: "Romance",
+    inStock: true,
+    images: [
+      {
+        image:
+          "/img/Sentimientos Adolescentes.png",
+      },
+    ],
+
+    reviews: [
+      {
+        id: "6499b4887402b0efd394d8f3",
+        userId: "6499b184b0e9a8c8709821d3",
+        productId: "648437b38c44d52b9542e340",
+        rating: 5,
+        comment:
+          "Me dolió bastante leer algunas partes del libro, Andrés sufre bastante...",
+        createdDate: "2023-06-26T15:53:44.483Z",
+        user: {
+          id: "6099b184b0e9a8c8709821d3",
+          name: "Daniel",
+          email: "example1@gmail.com",
+          emailVerified: null,
+          image:
+            "https://lh3.googleusercontent.com/a/AAcHTtcuRLwWi1vPKaQOcJlUurlhRAIIq2LgYccE8p32=s96-c",
+          hashedPassword: null,
+          createdAt: "2023-06-26T15:40:52.558Z",
+          updatedAt: "2023-06-26T15:40:52.558Z",
+          role: "USER",
+        },
+      },
+      {
+        id: "6499a110efe4e4de451c7edc",
+        userId: "6475af156bad4917456e6e1e",
+        productId: "648437b38c44d52b9542e340",
+        rating: 5,
+        comment: "Andrés me trae muchos recuerdos, es muy curioso todo lo que siente...",
+        createdDate: "2023-06-26T14:30:40.998Z",
+        user: {
+          id: "6478af156bad4917456e6e1e",
+          name: "Gabrielle",
+          email: "example@gmail.com",
+          emailVerified: null,
+          image:
+            "https://lh3.googleusercontent.com/a/AAcHTteOiCtILLBWiAoolIW9PJH-r5825pBDl824_8LD=s96-c",
+          hashedPassword: null,
+          createdAt: "2023-05-30T08:08:53.979Z",
+          updatedAt: "2023-05-30T08:08:53.979Z",
+          role: "ADMIN",
+        },
+      },
+    ],
+  },
+  {
     id: "132437b38c44d52z9542e340",
     name: "Los Juegos de Moya",
     description: 
