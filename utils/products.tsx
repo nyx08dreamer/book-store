@@ -543,7 +543,7 @@ export const products = [
   },
   {
     id: "188437b38c44d52z9542e340",
-    name: "Red, White and Blue Royale",
+    name: "Red, White and Royal Blue",
     description: 
       "Alex Claremont-Diaz es el hijo de la primera mujer presidenta de Estados Unidos. Durante una visita al Reino Unido, tiene un altercado con Henry, un príncipe británico. Alex y Henry tienen que fingir ser amigos para evitar una crisis diplomática, pero esa tregua desencadena algo más profundo.",
     price: 39.99,
@@ -1068,7 +1068,7 @@ export const products = [
     name: "A través de Ti",
     description: 
       "¿Qué se siente vivir con tres chicos hermosos? Eres tan afortunada. Que envidia. Vivir con esas bellezas, que privilegio. ¿Cómo puedes vivir con ellos? ¿Te has tirado alguno? ¿Podrías conseguirme su número de celular? Eso es solo un poco de lo que he tenido que lidiar desde que los chicos Hidalgo crecieron y se convirtieron en el sueño húmedo de todas las chicas de este lugar. Artemis, Ares y Apolo Hidalgo son los responsables de muchos suspiros de chicas en las calles y con los que crecí, aunque no seamos familia. Muchas personas me creen afortunada, pero están tan equivocados sobre mi vida, no saben mi historia, no todo es color de rosa en la vida de una chica como yo. Nada es tan fácil y simple en la vida de alguien como yo.",
-    price: 20.99,
+    price: 29.99,
     brand: "Ariana Godoy",
     category: "Romance",
     inStock: true,
@@ -1308,7 +1308,7 @@ export const products = [
     name: "Carrie",
     description: 
       "El escalofriante caso de una joven de apariencia insignificante que se transformó en un ser de poderes anormales, sembrando el terror en la ciudad. Con pulso mágico para mantener la tensión a lo largo de todo el libro, Stephen King narra la atormentada adolescencia de Carrie, y nos envuelve en una atmósfera sobrecogedora cuando la muchacha realiza una serie de descubrimientos hasta llegar al terrible momento de la venganza. Esta novela fue llevada al cine con un inmenso éxito de público y crítica.",
-    price: 25.00,
+    price: 24.99,
     brand: "Stephen King",
     category: "Terror",
     inStock: true,
@@ -1548,7 +1548,7 @@ export const products = [
     name: "Gregor: La Profecia del Gris",
     description: 
       "Gregor tiene once años y vive en Nueva York. Su existencia no es muy distinta de la de cualquier chico de su edad. Sin embargo, el destino le tiene reservada una sorpresa. Un caluroso día de verano, él y su hermana Boots, de dos años, caen accidentalmente por una rejilla de ventilación. De repente, el pequeño mundo de Gregor desaparece. En las Tierras Bajas, una extraña sociedad, en la que conviven seres humanos con murciélagos y cucarachas, se encuentra amenazada por las ratas, y la llegada de Gregor no parece casual. Una antigua profecía que habla de un guerrero hará que Gregor ponga a prueba su valor: emprenderá un peligroso viaje a través del universo subterráneo de las Tierras Bajas. Pero ¿acaso alguien de tan sólo once años puede convertirse en héroe?",
-    price: 35.00,
+    price: 34.99,
     brand: "Suzanne Collins",
     category: "Fantásia",
     inStock: true,
@@ -1608,7 +1608,7 @@ export const products = [
     name: "Los Casos de Monsieur Dupin",
     description: 
       "Los casos de Monsieur Dupin reúnen en un mismo volumen lastres historias del genial detective salidas de la pluma de Poe: Los crímenes de la rue Morgue, El misteriode Marie Rogêt y La carta robada. Dupin inaugura dentro de la literatura el tema policial, eltema del detective —casi siempre «amateur», y cuya intervención en los sucesospermite multiplicar pistas y sospechosos— y del asesino —cuya identidad nollega a descubrirse hasta el final de la historia—, dos figuras que libran unalucha a muerte por el dominio de la escena. Dupin es el prototipo de una serie de detectives privadosque incluye a Sherlock Holmes y su Watson, Martin Hewit y su Brett, Poirot y sucapitán Hastings. El volumen se completa con los otros dos únicos relatos demisterio de Poe, Tú eres el hombre y El escarabajo de oro, uno de sus relatosmás logrados. «Los crímenes de la rue Morgue» constituye por sí mismo unmanual casi completo de teoría y práctica detectivesca. Dorothy L. Sayers",
-    price: 25.00,
+    price: 24.99,
     brand: "Edgar Allan Poe",
     category: "Terror",
     inStock: true,
@@ -2508,7 +2508,7 @@ export const products = [
     name: "El Alquimista",
     description: 
       "«Éste libro relata la historia de un joven pastor andaluz que un día dejó su rebaño de ovejas para emprender un viaje en el que aprendió a escuchar a su corazón y descifrar un lenguaje que está más allá de las palabras. Nos recuerda la incapacidad que las personas tienen para escoger su propio destino. Nos habla de la leyenda personal que cada persona tiene. Vivir la leyenda personal es la razón de vivir. Y cuando quieres algo, todo el Universo conspira para que realices tu deseo, tu sueño. El joven pastor viaja en busca de su tesoro escondido siguiendo las señales. Dios escribió en el mundo el camino que cada hombre debe seguir. Sólo hay que leer lo que Él escribió para cada uno de nosotros. El Alquimista es comparado con otros libros conocidos como El Principito o Juan Salvador Gaviota. Con este viaje por las arenas del desierto, Paulo Coelho crea un símbolo hermoso y revelador de la vida, el hombre y sus sueños.",
-    price: 15.00,
+    price: 14.99,
     brand: "Paulo Coelho",
     category: "Drama",
     inStock: true,
@@ -2568,7 +2568,7 @@ export const products = [
     name: "El Demonio y la Señorita Prym",
     description: 
       "Viscos es un pueblo del norte de España perdido en el tiempo y el espacio, donde sus habitantes, en su mayoría gente mayor cuyos hijos se han trasladado a la gran ciudad, viven aburridos y esperando el fin del pueblo. Es una comunidad dividida por la codicia, la cobardía y el miedo. Un día un extranjero llega al pueblo, un hombre perseguido por el fantasma de un pasado doloroso y conoce a la joven camarera Chantal Prym, una joven en busca de la felicidad. El extranjero ha viajado desde muy lejos y necesita encontrar la respuesta a una pregunta que le atormenta: en su esencia, ¿el ser humano es bueno o malo? En siete días se desarrolla una trama perversa con la que el extranjero pone a prueba a los habitantes de Viscos. Allí, enterrados bajo tierra, hay diez lingotes de oro que entregará al pueblo con una condición: que la señorita Prym les proponga a sus vecinos que maten a alguien en el plazo de una semana. Si aparece un habitante asesinado, él les entregará ese oro que les arreglará la vida y le quedará claro que el ser humano es malo por naturaleza. Si no, él se llevará el oro consigo y comprenderá que el ser humano es bueno por naturaleza.",
-    price: 25.00,
+    price: 24.99,
     brand: "Paulo Coelho",
     category: "Psicológico",
     inStock: true,
@@ -2808,7 +2808,7 @@ export const products = [
     name: "El Viejo y El Mar",
     description: 
       "Es una novela escrita por Ernest Hemingway en 1951 en Cuba y publicada en 1952. Fue su último trabajo de ficción importante publicado en vida y posiblemente su obra más famosa. Un viejo lobo de mar está pasando una racha de mala suerte: hace 84 días que no logra capturar un solo pez. Todos los habitantes del pueblo se burlan de él, excepto un niño, que le mira y ayuda. Ambos deciden que el día siguiente será bueno para la pesca del pez espada. Todavía es de noche cuando se levanta, prepara los aparejos y se lanza a la mar con su pequeña barca. En alta mar, el viejo pone diversas carnadas. De pronto, la línea comienza a moverse. El viejo no puede controlarla. Se trata de un gigantesco pez espada. Cuatro horas más tarde, el pez se sacude en la superficie del agua y arrastra la barca. El viejo lo sostiene con el sedal enrollado alrededor del cuerpo. No hay tierra a la vista. Ahora, mar adentro, el viejo sostiene en su línea al pez más grande que jamás había visto.",
-    price: 25.00,
+    price: 24.99,
     brand: "Ernest Hemingway",
     category: "Drama",
     inStock: true,
@@ -2868,7 +2868,7 @@ export const products = [
     name: "El Jardín del Edén",
     description: 
       "Una obra póstuma, aunque terminada en vida, sobre la complejidad del amor y de la creación artística. Por el Premio Nobel de Literatura Ernest Hemingway. La concepción y redacción de El jardín del Edén se inició en 1946, contemporánea de otras novelas que vieron la luz en vida del autor, como El viejo y el mar o París era una fiesta. Pero no llegó a las imprentas hasta veinticinco años después de la muerte de Hemingway. Es, por tanto, una obra póstuma, aunque terminada en vida, que trata, con una interpretación profunda, gran imaginación y una prosa vivaz, sobre la complejidad del amor y de la creación artística a través de un atípico triángulo amoroso entre el protagonista, David Bourne, su mujer Catherine y una joven que la propia Catherine coloca en el camino de su marido. No se trata exactamente de una novela autobiográfica, aunque el protagonista sea un escritor americano al que empieza a saludar el éxito, ni de una novela sobre un atípico triángulo amoroso. Es, más bien, la revelación de la ternura y vulnerabilidad que Hemingway, como ser humano, ocultaba tras su imagen pública; la amarga explicación de las características principales del artista y del precio que ha de pagar para mantener su vocación; y el nacimiento de una de las heroínas más logradas y complejas del autor: Catherine Bourne.",
-    price: 15.00,
+    price: 14.99,
     brand: "Ernest Hemingway",
     category: "Romance",
     inStock: true,
@@ -2928,7 +2928,7 @@ export const products = [
     name: "Dune",
     description: 
       "En el desértico planeta Arrakis, el agua es el bien más preciado y llorar a los muertos, el símbolo de máxima prodigalidad. Pero algo hace de Arrakis una pieza estratégica para los intereses del Emperador, las Grandes Casas y la Cofradía, los tres grandes poderes de la galaxia. Arrakis es el único origen conocido de la melange, preciosa especia y uno de los bienes más codiciados del universo. Al duque Leto Atreides se le asigna el gobierno de este mundo inhóspito, habitado por los indómitos Fremen y monstruosos gusanos de arena de centenares de metros de longitud. Sin embargo, cuando la familia es traicionada, su hijo y heredero, Paul, emprenderá un viaje hacia un destino más grande del que jamás hubiese podido soñar. Mezcla fascinante de aventura, misticismo, intrigas políticas y ecologismo, Dune se convirtió, desde el momento de su publicación, en un fenómeno de culto y en la mayor epopeya de ciencia-ficción de todos los tiempos.",
-    price: 35.00,
+    price: 34.99,
     brand: "Frank Herbert",
     category: "Ciencia Ficción",
     inStock: true,
@@ -2988,7 +2988,7 @@ export const products = [
     name: "Yo, Robot",
     description: 
       "Una investigación llevada a cabo por un periodista acerca de la trayectoria de la robopsicóloga Susan Calvin da pie a los nueve relatos que componen esta novela. Las tres leyes de la robótica, a las que en obras posteriores Asimov añadiría alguna más, constituyen las normas que rigen el comportamiento en los diferentes conflictos que se presentan entre humanos y robots. Si bien admiten una lectura independiente, la modernidad y éxito de este libro se explica por la audacia en la composición y por la aplastante lógica en las reflexiones que aparecen acerca de la robótica. Yo, robot es uno de los pocos títulos de ciencia ficción que han superado con amplitud el círculo de lectores especialmente aficionados, entre los que a menudo se considera una obra cumbre.",
-    price: 25.00,
+    price: 24.99,
     brand: "Isaac Asimov",
     category: "Ciencia Ficción",
     inStock: true,
@@ -3228,7 +3228,7 @@ export const products = [
     name: "Crepúsculo",
     description: 
       "Cuando Isabella Swan se muda a Forks, una pequeña localidad del estado de Washington en la que nunca deja de llover, piensa que es lo más aburrido que le podía haber ocurrido en la vida. Pero su vida da un giro excitante y aterrador una vez que se encuentra con el misterioso y seductor Edward Cullen. Hasta ese momento, Edward se las ha arreglado para mantener en secreto su identidad vampírica, pero ahora nadie se encuentra a salvo, y sobre todo Isabella, la persona a quien más quiere Edward...",
-    price: 25.00,
+    price: 24.99,
     brand: "Stephenie Meyer",
     category: "Fatasía, Romance",
     inStock: true,
@@ -3288,7 +3288,7 @@ export const products = [
     name: "La Huésped",
     description: 
       "Melanie Stryder se niega a desaparecer. La tierra ha sido invadida por criaturas que han tomado el control de las mentes de los humanos en los que se hospedan, dejando los cuerpos intactos, y la mayor parte de la humanidad ha sucumbido. Wanderer, el «alma» invasora que habita el cuerpo de Melanie, se enfrenta al reto de vivir dentro de un humano: las emociones abrumadoras, los recuerdos demasiado intensos, pero hay una sola dificultad que Wanderer no consigue vencer: la anterior propietaria de su cuerpo lucha por retener la posesión de su mente. Melanie inunda la mente de Wanderer con visiones del hombre que ama, Jared, un humano que vive oculto, hasta el punto de que, incapaz de controlar los deseos de su cuerpo, anhela a un hombre al que jamás ha visto. Una serie de circunstancias externas las convierte en aliadas muy a su pesar y parten en busca del hombre que ambas aman a la vez. The Host nos muestra el primer triángulo amoroso que implica a sólo dos cuerpos, en una inolvidable y fascinante novela que atraerá a un gran número de lectores de una de las más cautivadores escritoras de nuestro tiempo.",
-    price: 35.00,
+    price: 34.99,
     brand: "Stephenie Meyer",
     category: "Ciencia Ficción, Romance",
     inStock: true,
@@ -3468,7 +3468,7 @@ export const products = [
     name: "El Último Deseo",
     description: 
       "Geralt de Rivia, brujo y mutante sobrehumano, se gana la vida como cazador de monstruos en una tierra de magia y maravilla: con sus dos espadas al hombro —la de acero para hombres, y la de plata para bestias— da cuenta de estriges, mantícoras, grifos, vampiros, quimeras y lobisomes, pero sólo cuando amenazan la paz. Irónico, cínico, descreído y siempre errante, sus pasos le llevan de pueblo en pueblo ofreciendo sus servicios, hallando las más de las veces que los auténticos monstruos se esconden bajo rostros humanos. En su camino sorteará intrigas, elegirá el mal menor, debatirá cuestiones de precio, hollará el confín del mundo y realizará su último deseo: así comienzan las aventuras del brujo Geralt de Rivia",
-    price: 35.00,
+    price: 34.99,
     brand: "Andrzej Sapkowski",
     category: "Fantasía",
     inStock: true,
@@ -3528,7 +3528,7 @@ export const products = [
     name: "Lux Perpetua",
     description: 
       "El Anticristo, muy señores míos, querido público, será de la estirpe de Dan. Reinmar de Bielau, llamado Reynevan, se encuentra en una encrucijada. Por un lado, el médico y alquimista educado en Praga se ha convertido en un participante de importancia en la revolución husita contra el clero y la nobleza, un movimiento que ha impuesto su ley en Bohemia y Moravia, y que amenaza con extenderse por toda Silesia, Sajonia y Polonia hasta el mar Báltico. Por otro, la Inquisición ha capturado a su amada, Jutta de Apolda, y la utiliza como baza para chantajearle y obligarle a espiar para los enemigos de los husitas. Excomulgado, manipulado por unos y otros, y rodeado de una creciente desconfianza entre los suyos, sólo contará con la ayuda de sus fieles amigos Scharley y Sansón Mieles para sortear intrigas y peligros sin cuento, inmerso en un espeluznante juego de poder que enfrenta a nobles y campesinos, eslavos y alemanes, paganos y cristianos, partidarios del progreso y defensores de la tradición.",
-    price: 35.00,
+    price: 34.99,
     brand: "Andrzej Sapkowski",
     category: "Fantasía",
     inStock: true,
@@ -3708,7 +3708,7 @@ export const products = [
     name: "Las Pruebas",
     description: 
       "EL LABERINTO FUE SOLO EL COMIENZO. Resolver el laberinto se suponía que era el final. No más pruebas, no más huidas. Thomas creía que salir significaba que todos recobrarían sus vidas, pero ninguno sabía a qué clase de vida estaban volviendo. Árida y carbonizada, gran parte de la tierra es un territorio inservible. El sol abrasa, los gobiernos han caído y una misteriosa enfermedad se ha ido apoderando poco a poco de la gente. Sus causas son desconocidas; su resultado, la locura. En un lugar infestado de miseria y ruina, Thomas conoce a una chica que asegura haber contraído la enfermedad y estar a punto de sucumbir a sus efectos. Entretanto, Teresa ha desaparecido, la organización CRUEL les ha dejado un mensaje, un misterioso chico ha llegado y alguien ha tatuado unas palabras en los cuellos de los clarianos. La de Minho dice «el líder»; la de Thomas, «el que debe ser asesinado».",
-    price: 15.00,
+    price: 14.99,
     brand: "James Dashner",
     category: "Fantasía",
     inStock: true,
@@ -3768,7 +3768,7 @@ export const products = [
     name: "Fahrenheit 451",
     description: 
       "La temperatura a la que el papel se enciende y arde. Guy Montag es un bombero y el trabajo de un bombero es quemar libros, que están prohibidos porque son causa de discordia y sufrimiento. El Sabueso Mecánico del Departamento de Incendios, armado con una letal inyección hipodérmica, escoltado por helicópteros, está preparado para rastrear a los disidentes que aún conservan y leen libros. Como 1984, de George Orwell, como Un mundo feliz, de Aldous Huxley, Fahrenheit 451 describe una civilización occidental esclavizada por los medios, los tranquilizantes y el conformismo. La visión de Bradbury es asombrosamente profética: pantallas de televisión que ocupan paredes y exhiben folletines interactivos; avenidas donde los coches corren a 150 kilómetros por hora persiguiendo a peatones; una población que no escucha otra cosa que una insípida corriente de música y noticias transmitidas por unos diminutos auriculares insertados en las orejas.",
-    price: 25.00,
+    price: 24.99,
     brand: "Ray Bradbury",
     category: "Ciencia Ficción",
     inStock: true,
@@ -3888,7 +3888,7 @@ export const products = [
     name: "Hay Momentos que Deberían ser Eternos",
     description: 
       "Una emotiva historia que nos enseña que el mejor viaje de la vida es el amor. Eva es una mujer independiente, segura de sí misma y muy vinculada con su adinerada familia, a pesar de que sus hermanos, en ocasiones, no se lo pongan nada fácil. Tras un fracaso amoroso en el pasado decidió volcarse en sus restaurantes, y es su trabajo de chef lo que llena su vida. Marc Sarriá, más conocido como doctor Sarriá, es un prestigioso y querido cirujano oncólogo en un hospital privado de Madrid. Hace unos años tomó la decisión de vivir el presente y no plantearse el futuro más allá del día a día. Los caprichos del destino hacen que dos personas tan distintas como Eva y Marc se conozcan una tarde en una azotea y terminen la noche como nunca imaginaron. De pronto y sin proponérselo, ¡acaban convirtiéndose en inseparables! Eva se da cuenta entonces de que existe vida más allá del trabajo, de que la presión, si la controlas, no hunde sino ayuda, y de que el amor, cuando se trata de amor verdadero, es ineludible. Hay momentos que deberían ser eternos, la nueva novela de Megan Maxwell, llenará tu corazón de emociones y te hará sonreír con esas pequeñas cosas que convierten la vida en algo maravilloso.",
-    price: 25.00,
+    price: 24.99,
     brand: "Megan Maxwell",
     category: "Romance",
     inStock: true,
@@ -3948,7 +3948,7 @@ export const products = [
     name: "Pídeme lo que quieras y Yo te lo daré",
     description: 
       "A pesar de las discusiones que provocan sus diferentes caracteres, el empresario Eric Zimmerman y Judith Flores siguen tan enamorados como el día en que sus miradas se cruzaron por primera vez. Juntos han formado una preciosa familia a la que adoran y por la que son capaces de hacer cualquier cosa. Flyn, aquel niño al que Judith conoció al llegar a Múnich, se ha convertido en un adolescente, y tal como les ocurre a la mayoría de los jóvenes, su vida se complica y afecta a todos los que conforman su entorno. El abogado Björn y la exteniente Mel continúan con su bonita historia de amor junto a la «pinsesa» Sami. Sin duda, la convivencia les ha beneficiado mucho. Pero hay algo que Björn no consigue de Mel: que se case con él. Las relaciones de las dos parejas van viento en popa. Se quieren, se respetan, nada parece fuera de lugar, hasta que de repente, personas y sorpresas del pasado irrumpen en sus vidas y lo ponen todo patas arriba. ¿Serán capaces de superar este giro inesperado? ¿Podrá con todo el amor que se profesan?; o, por el contrario, ¿cambiarán sus sentimientos para siempre?",
-    price: 25.00,
+    price: 24.99,
     brand: "Megan Maxwell",
     category: "Romance",
     inStock: true,
