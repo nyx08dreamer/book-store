@@ -23,7 +23,7 @@ const CheckoutClient = () => {
     console.log("paymentIntent", paymentIntent);
     console.log("clientSecret", clientSecret);
 
-
+ //Apartado del chequeo del pago de los clientes
 
     useEffect(() => {
         //create a paymentIntent as soon as the page loads

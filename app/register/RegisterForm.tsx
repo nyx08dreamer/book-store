@@ -17,6 +17,8 @@ interface RegisterFormProps{
     currentUser: User | null
 }
 
+//Apartado para el registro de clientes para poder acceder al sistema
+
 const RegisterForm: React.FC<RegisterFormProps> = ({currentUser}) => {
 
     const [isLoading, setIsLoading] = useState(false)

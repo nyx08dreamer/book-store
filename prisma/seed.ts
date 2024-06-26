@@ -7,6 +7,9 @@ import { categories } from './category';
 import { orders } from './order';
 const prisma = new PrismaClient()
 
+
+//Esto es la semilla a la cual le solicitamos los parámetros que se encuentran en los demás archivos (exportándolos) y con eso, podemos enviarle información desde aquí a la base de datos
+
 async function main() {
     
     for (let book of books){

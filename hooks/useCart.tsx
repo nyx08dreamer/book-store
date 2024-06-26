@@ -2,6 +2,9 @@ import { CartProductType } from "@/app/product/[productId]/ProductDetails";
 import { createContext, useCallback, useContext, useEffect, useState } from "react";
 import {toast} from 'react-hot-toast';
 
+//Este apartado es para el carrito, en el cual se puede aumentar o disminuir la cantidad del libro seleccionado, del mismo modo que se puede remover un libro o limpiar todo el carrito
+
+
 type CartContextType = {
     cartTotalQty: number;
     cartTotalAmount: number;

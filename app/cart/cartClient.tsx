@@ -13,6 +13,8 @@ interface CartClientProps{
     currentUser: SafeUser | null
 }
 
+//Como el cliente ve el carrito
+
 const CartClient: React.FC<CartClientProps> = ({currentUser}) => {
     const {cartProducts, handleClearCart, cartTotalAmount} = useCart();
 

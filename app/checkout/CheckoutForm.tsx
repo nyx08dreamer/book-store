@@ -18,6 +18,9 @@ interface CheckoutFormProps{
     handleSetPaymentSuccess: (value: boolean) => void;
 }
 
+//Apartado del chequeo de los pagos
+
+
 const CheckoutForm: React.FC<CheckoutFormProps> = ({clientSecret, handleSetPaymentSuccess}) => {
     const {cartTotalAmount, handleClearCart, handleSetPaymentIntent} = useCart()
     const stripe = useStripe()

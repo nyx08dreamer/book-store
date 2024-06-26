@@ -16,6 +16,8 @@ interface LoginFormProps{
     currentUser: User | null
 }
 
+//Apartado del Login con su manera en como está hecha
+
 const LoginForm: React.FC<LoginFormProps> = ({currentUser}) => {
 
     const [isLoading, setIsLoading] = useState(false)

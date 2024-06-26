@@ -1,3 +1,5 @@
+//Categorías de los Libros con sus respectivos Íconos
+
 import { IoBookSharp } from "react-icons/io5";
 import { GiTerror } from "react-icons/gi";
 import { LiaFantasyFlightGames } from "react-icons/lia";

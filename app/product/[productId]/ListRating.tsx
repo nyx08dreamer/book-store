@@ -9,10 +9,12 @@ interface ListRatingProps {
     product: any;
 }
 
+//Reseñas de los Libros
+
 const ListRating: React.FC<ListRatingProps> = ({
     product }) => {
     return (<div>
-        <Heading tittle="Product Review" />
+        <Heading title="Product Review" />
         <div className="text-sm mt-2">
             {product.reviews && product.reviews.map((review: any) =>
             {
