@@ -1135,7 +1135,7 @@ export const products = [
     images: [
       {
         image:
-          "/img/Abyss - Imgur.jpg",
+          "/img/Abyss.jpg",
       },
     ],
 

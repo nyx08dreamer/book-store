@@ -8,6 +8,7 @@ import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import { MdCheckCircle } from "react-icons/md";
 import { useRouter } from "next/navigation";
+import { formatPrice } from "@/utils/formatPrice";
 
 interface ProductDetailsProps{
     product: any
@@ -118,13 +119,16 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({product}) => {
                 </div>
                 <Horizontal/>
                 <div>
-                    <span className="font-semibold">CATEGORÍA: </span> {product.category}
+                    <span className="font-semibold">GÉNERO: </span> {product.category}
                 </div>
                 <div>
                     <span className="font-semibold">AUTOR: </span> {product.brand}
                 </div>
+                <div>
+                    <span className="font-semibold">PRECIO: </span> {formatPrice(product.price)}
+                </div>
                 <div className={product.inStock ? 'text-teal-400' : 'text-rose-400'}>
-                    {product.inStock ? 'In Stock' : 'Out of Stock'}
+                    {product.inStock ? 'Disponible' : 'No Disponible'}
                 </div>
                 <Horizontal/>
                 {isProductInCart ? (

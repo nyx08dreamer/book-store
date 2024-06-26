@@ -16,7 +16,7 @@ const HomeBanner = () => {
                     <p className="text-2xl md:text-5xl text-yellow-400 font-bold">NO TE LOS PIERDAS</p>
                 </div>
                 <div className="w-1/3 relative aspect-video">
-                    <Image src="/banner-image.png"
+                    <Image src="/img/logo-book-store.png"
                     fill
                     alt="Banner Image"
                     className="object-contain"

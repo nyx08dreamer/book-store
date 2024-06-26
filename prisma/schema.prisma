@@ -34,7 +34,7 @@ model Customer {
 }
 
 model Book {
-  id Int @id @default(autoincrement())
+  id String @id 
   title String
   author Author[]
   description String
@@ -53,7 +53,7 @@ model Review {
   customer Customer @relation(fields: [customerId], references: [id])
   customerId Int @unique
   books Book @relation(fields: [bookId], references: [id])
-  bookId Int @unique
+  bookId String @unique
   rating Int
   comment String
   createDate DateTime @default(now())
@@ -95,7 +95,7 @@ model Image {
   id Int @id @default(autoincrement())
   image String
   books Book @relation(fields: [bookId], references: [id])
-  bookId Int
+  bookId String
 }
 
 model Address {

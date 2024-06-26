@@ -69,7 +69,7 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({clientSecret, handleSetPayme
         <h2 className="font-semibold mb-2">Información de Dirección</h2>
         <AddressElement options={{
             mode: "shipping",
-            allowedCountries: ["US", "KE"],
+            allowedCountries: ["US", "VE"],
         }}
         />
         <h2 className="font-semibold mt-4 mb-2">Información del Pago</h2>

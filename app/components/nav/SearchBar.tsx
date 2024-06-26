@@ -1,13 +1,13 @@
 'use client'
 
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import queryString from "query-string";
-import { Field, FieldValues, useForm } from "react-hook-form";
+import { Field, FieldValues, SubmitHandler, useForm } from "react-hook-form";
 
 
 const SearchBar = () => {
 
-    const router = useRouter; //Con los parentesis en useRouter no se quejan los push pero no levanta el sistema
+    const router = useRouter() //Con los parentesis en useRouter no se quejan los push pero no levanta el sistema
 
     const {
         register,
