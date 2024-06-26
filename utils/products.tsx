@@ -1904,7 +1904,7 @@ export const products = [
     ],
   },
   {
-    id: "887437b38c44d52b9542e340",
+    id: "88743ab38c44d52b9542e340",
     name: "El Juego de Ender",
     description: 
       "La Tierra se ve amenazada por los insectores, una raza extraterrestre completamente ajena a los humanos, a los que pretende destruir. Para vencer a los insectores es necesario un nuevo tipo de genio militar, y por ello se ha permitido el nacimiento de Ender, quien en cierta forma constituye una anomalía viviente: es el tercer hijo de una pareja en un mundo que ha limitado estrictamente a dos el número de descendientes. El niño Ender deberá aprender todo lo relativo a la guerra en los videojuegos y en los peligrosos ensayos de batallas que realiza con sus compañeros. A la habilidad en el tratamiento de las emociones, ya característica de Orson Scott Card, se une en este libro el interés por el empleo de las simulaciones de ordenador y juegos de fantasía en la formación militar, estratégica y psicológica del protagonista.",
